@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: 'SansitaOne';
+    src: url('/SansitaOne.ttf');
+   }
+@layer utilities {
+    .transform-none {
+      transform: none !important;
+    }
+}
+
+body{
+    background-color: black;
+    color: white;
+    font-family: 'Roboto';
+}
+
+
+
+.gradient-text {
+    background: linear-gradient(to right, #97ff5f,#22a0a9, #6ef5ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.gradient-text2 {
+    background: linear-gradient(to top, #5540dd,#51c8d1, #98ecf1);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.SansitaOnef { 
+    font-family: 'SansitaOne';
+}
+
+
