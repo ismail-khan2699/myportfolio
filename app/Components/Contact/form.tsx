@@ -24,14 +24,14 @@ const CoontactForm = () => {
                     <Image src={'/astar.svg'} alt='' height={25} width={25} className=' absolute bottom-10 right-5 md:top-20  md:right-3  -z-10 animate-spin-slower' />
                     <Image src={'/svg.png'} alt='' height={200} width={1000} className=' w-full absolute bottom-0  left-0 h-auto max-h-44 -z-10 opacity-25' />
 
-                    <div className=' w-full md:w-1/3 px-5 py-3 flex flex-col gap-10 rounded-lg relative overflow-hidden'>
+                    <div className=' w-full md:w-6/12 lg:w-1/3 px-5 py-3 flex flex-col gap-10 rounded-lg relative overflow-hidden'>
                         <Image src={'/mesh.png'} alt='' height={1000} width={1000} className=' absolute left-0 top-0 min-h-full min-w-full -z-10 ' />
                         <p className=' text-xl font-semibold'>Contact Information</p>
                         <div className=' flex flex-col h-32 justify-between'>
                             <div className=' flex gap-3 items-center pointer-events-none' >
                                 <FaPhoneAlt /> <span>+92 3473738731</span>
                             </div>
-                            <Link href="mailto:ismailahmadkhan4434@gmail.com" className=' flex gap-3 items-center ' >
+                            <Link href="mailto:ismailahmadkhan4434@gmail.com" className=' flex w-fit gap-3 items-center ' >
                                 <MdOutlineEmail /> <span>ismailahmadkhan4434@gmail.com</span>
                             </Link>
                             <div className=' flex gap-3 items-center pointer-events-none' >
@@ -39,7 +39,7 @@ const CoontactForm = () => {
                             </div>
                         </div>
                     </div>
-                    <div className=' w-full md:w-2/3 flex justify-center items-center'>
+                    <div className=' w-full md:w-7/12 lg:w-2/3 flex justify-center items-center'>
 
 
                         <form onSubmit={handleSubmit} className='w-full flex flex-col gap-3 py-5 px-10 md:px-20'>
@@ -118,60 +118,7 @@ const CoontactForm = () => {
                 </div>
             </div>
 
-            {/* <form onSubmit={handleSubmit} className=' m-10 w-9/12 bg-slate-500/70 rounded-lg flex flex-col gap-3 p-20'>
-                <div className=' flex gap-5 justify-center items-center  '>
 
-                    <label htmlFor="email" className=' w-3/12'>
-                        Email Address:
-                    </label>
-                    <input
-                        id="email"
-                        type="email"
-                        name="email"
-                        className=' outline-none focus:outline-none w-full bg-slate-500 text-white py-2 px-4'
-                    />
-                    <ValidationError
-                        prefix="Email"
-                        field="email"
-                        errors={state.errors}
-                    />
-                </div>
-                <div className=' flex gap-5 justify-center items-center  '>
-
-                    <label htmlFor="email" className=' w-3/12'>
-                        Name :
-                    </label>
-                    <input
-                        id="name"
-                        type="name"
-                        name="name"
-                        className=' outline-none focus:outline-none w-full bg-slate-500 text-white py-2 px-4'
-                    />
-                    <ValidationError
-                        prefix="Name"
-                        field="name"
-                        errors={state.errors}
-                    />
-                </div>
-
-
-                <label htmlFor="email" className=' w-3/12'>
-                    Message:
-                </label>
-                <textarea
-                    id="message"
-                    name="message"
-                    className='outline-none focus:outline-none w-full bg-slate-500 text-white py-2 px-4'
-                />
-                <ValidationError
-                    prefix="Message"
-                    field="message"
-                    errors={state.errors}
-                />
-                <button type="submit" disabled={state.submitting}>
-                    Submit
-                </button>
-            </form> */}
         </div>
     )
 }
