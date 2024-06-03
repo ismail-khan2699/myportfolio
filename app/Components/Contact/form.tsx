@@ -27,7 +27,7 @@ const CoontactForm = () => {
                     <div className=' w-full md:w-1/3 px-5 py-3 flex flex-col gap-10 rounded-lg relative overflow-hidden'>
                         <Image src={'/mesh.png'} alt='' height={1000} width={1000} className=' absolute left-0 top-0 min-h-full min-w-full -z-10 ' />
                         <p className=' text-xl font-semibold'>Contact Information</p>
-                        <div className=' h-full flex flex-col gap-3'>
+                        <div className=' flex flex-col h-32 justify-between'>
                             <div className=' flex gap-3 items-center pointer-events-none' >
                                 <FaPhoneAlt /> <span>+92 3473738731</span>
                             </div>
@@ -100,7 +100,7 @@ const CoontactForm = () => {
                             <textarea
                                 id="message"
                                 name="message"
-                                className='outline-none focus:outline-none w-full border-white border h-32 bg-transparent text-white p-2'
+                                className='outline-none rounded-md focus:outline-none w-full border-white border h-32 bg-transparent text-white p-2'
                             />
                             <ValidationError
                                 prefix="Message"

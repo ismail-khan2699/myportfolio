@@ -23,7 +23,7 @@ const MeWelcome = () => {
             </div>
             <div className=' max-md:top-3  max-md:right-3 md:left-6 flex justify-center items-center  md:top-3 absolute h-32 w-32 '>
                 <Image src={'/textwhite.png'} alt='' height={100} width={100} className=' absolute h-32 w-32 animate-spin-slow duration-500' />
-                <Link href={'mailto:ismailahmadkhan4434@gmail.com'} className=' h-20 w-20 font-bold rounded-full z-50 border-white border bg-black flex justify-center items-center text-white transition-all duration-200 hover:text-black hover:bg-white hover:scale-95' >
+                <Link href={'mailto:ismailahmadkhan4434@gmail.com'} className=' h-20 w-20 font-bold rounded-full z-50 border-white border bg-[#28282B] flex justify-center items-center text-white transition-all duration-200 hover:text-black hover:bg-white hover:scale-95' >
                     Hire Me
                 </Link>
             </div>
