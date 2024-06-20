@@ -2,25 +2,10 @@
 import { motion } from 'framer-motion';
 import { ReactNode } from 'react';
 
-const pageVariants = {
-    initial: {
-        opacity: 0,
-        x: '-100vw',
-    },
-    in: {
-        opacity: 1,
-        x: 0,
-    },
-    out: {
-        opacity: 0,
-        x: '100vw',
-    },
-};
-
-const pageTransition = {
-    type: 'spring',
-    stiffness: 50,
-    damping: 12,
+const variants = {
+    hidden: { opacity: 0, x: -50, y: -50 },
+    enter: { opacity: 1, x: 0, y: 0 },
+    exit: { opacity: 0, x: 50, y: 50 },
 };
 
 interface PageTransitionProps {
@@ -31,13 +16,13 @@ interface PageTransitionProps {
 const PageTransition: React.FC<PageTransitionProps> = ({ children, onAnimationComplete }) => {
     return (
         <motion.div
-            initial="initial"
-            animate="in"
-            exit="out"
-            variants={pageVariants}
-            transition={pageTransition}
+            variants={variants}
+            initial="hidden"
+            animate="enter"
+            exit="exit"
+            transition={{ type: 'ease' }}
             onAnimationComplete={onAnimationComplete}
-            className="w-full h-full"
+            className=""
         >
             {children}
         </motion.div>

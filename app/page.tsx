@@ -18,13 +18,13 @@ export default function Home() {
       <AnimatePresence mode="wait" onExitComplete={() => window.scrollTo(0, 0)}>
         <PageTransition key="pageTransition" onAnimationComplete={handleAnimationComplete}>
           <Navbar />
+          {isPageTransitionComplete && (
+            <MeWelcomeWrapper>
+              <MeWelcome />
+            </MeWelcomeWrapper>
+          )}
         </PageTransition>
       </AnimatePresence>
-      {isPageTransitionComplete && (
-        <MeWelcomeWrapper>
-          <MeWelcome />
-        </MeWelcomeWrapper>
-      )}
 
     </div>
   );
