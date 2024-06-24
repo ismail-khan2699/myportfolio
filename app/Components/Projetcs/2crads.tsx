@@ -17,7 +17,7 @@ const Pcrads = () => {
 
                 {projects.map((project, index) => (
 
-                    <div className='w-11/12 md:w-full  h-full'>
+                    <div className='w-11/12 md:w-full  h-full' key={index}>
                         <ProjectCard
                             key={index}
                             imageUrl={project.imageUrl}
