@@ -17,7 +17,7 @@ const CoontactForm = () => {
             <p className=' text-5xl  font-bold'>Get In Touch</p>
             <p className=' px-4 text-center'>Ready to turn your ideas into reality? Let's connect and create something amazing together!</p>
             <div className=' w-full'>
-                <div className=' p-2 rounded-lg flex flex-col md:flex-row my-5 mx-5 gap-3 md:mx-10  border border-white relative'>
+                <div className=' p-2 rounded-lg flex flex-col md:flex-row my-5 mx-1 overflow-hidden gap-3 md:mx-10  border border-white relative'>
                     <Image src={'/asset.svg'} alt='' height={100} width={100} className=' absolute bottom-5 max-md:left-5 md:top-5  md:right-6  -z-10 opacity-75 animate-spin-slow' />
                     <Image src={'/asset.svg'} alt='' height={100} width={100} className=' absolute bottom-[50%]  left-[33%]  -z-10 animate-spin-slower opacity-75' />
                     <Image src={'/asset.svg'} alt='' height={100} width={100} className=' absolute bottom-10 right-5 md:top-20  md:right-3  -z-10 animate-spin-slower-rev opacity-75' />
@@ -32,7 +32,7 @@ const CoontactForm = () => {
                                 <FaPhoneAlt /> <span>+92 3473738731</span>
                             </div>
                             <Link href="mailto:ismailahmadkhan4434@gmail.com" className=' flex w-fit gap-3 items-center ' >
-                                <MdOutlineEmail /> <span>ismailahmadkhan4434@gmail.com</span>
+                                <MdOutlineEmail /><p className=' max-sm:text-sm text-base'>ismailahmadkhan4434@gmail.com</p>
                             </Link>
                             <div className=' flex gap-3 items-center pointer-events-none' >
                                 <IoLocationOutline /> <span>Punjab, Pakistan</span>
@@ -42,57 +42,51 @@ const CoontactForm = () => {
                     <div className=' w-full md:w-7/12 lg:w-2/3 flex justify-center items-center'>
 
 
-                        <form onSubmit={handleSubmit} className='w-full flex flex-col gap-3 py-5 px-10 md:px-20'>
-                            <div className='flex gap-5 justify-center items-center'>
-                                <label htmlFor="name" className='w-3/12'>
-                                    Name:
-                                </label>
-                                <input
-                                    id="name"
-                                    type="text"
-                                    name="name"
-                                    className='outline-none focus:outline-none w-full border-b-white border-b bg-transparent text-white py-2'
-                                />
-                                <ValidationError
-                                    prefix="Name"
-                                    field="name"
-                                    errors={state.errors}
-                                />
-                            </div>
+                        <form onSubmit={handleSubmit} className='w-full grid grid-cols-4 gap-5 py-5 px-3 md:px-20'>
+                            <label htmlFor="name" className='w-3/12'>
+                                Name:
+                            </label>
+                            <input
+                                id="name"
+                                type="text"
+                                name="name"
+                                className='outline-none focus:outline-none w-full col-span-3 border-b-white border-b bg-transparent text-white py-2'
+                            />
+                            <ValidationError
+                                prefix="Name"
+                                field="name"
+                                errors={state.errors}
+                            />
 
-                            <div className='flex gap-5 justify-center items-center'>
-                                <label htmlFor="email" className='w-3/12'>
-                                    Email Address:
-                                </label>
-                                <input
-                                    id="email"
-                                    type="email"
-                                    name="email"
-                                    className='outline-none focus:outline-none w-full border-b-white border-b bg-transparent text-white py-2'
-                                />
-                                <ValidationError
-                                    prefix="Email"
-                                    field="email"
-                                    errors={state.errors}
-                                />
-                            </div>
+                            <label htmlFor="email" className='w-3/12'>
+                                Email Address:
+                            </label>
+                            <input
+                                id="email"
+                                type="email"
+                                name="email"
+                                className='outline-none focus:outline-none col-span-3 w-full border-b-white border-b bg-transparent text-white py-2'
+                            />
+                            <ValidationError
+                                prefix="Email"
+                                field="email"
+                                errors={state.errors}
+                            />
 
-                            <div className='flex gap-5 justify-center items-center'>
-                                <label htmlFor="subject" className='w-3/12'>
-                                    Subject:
-                                </label>
-                                <input
-                                    id="subject"
-                                    type="text"
-                                    name="subject"
-                                    className='outline-none focus:outline-none w-full border-b-white border-b bg-transparent text-white py-2'
-                                />
-                                <ValidationError
-                                    prefix="Subject"
-                                    field="subject"
-                                    errors={state.errors}
-                                />
-                            </div>
+                            <label htmlFor="subject" className='w-3/12'>
+                                Subject:
+                            </label>
+                            <input
+                                id="subject"
+                                type="text"
+                                name="subject"
+                                className='outline-none focus:outline-none col-span-3 w-full border-b-white border-b bg-transparent text-white py-2'
+                            />
+                            <ValidationError
+                                prefix="Subject"
+                                field="subject"
+                                errors={state.errors}
+                            />
 
                             <label htmlFor="message" className='w-3/12'>
                                 Message:
@@ -100,19 +94,16 @@ const CoontactForm = () => {
                             <textarea
                                 id="message"
                                 name="message"
-                                className='outline-none rounded-md focus:outline-none w-full border-white border h-32 bg-transparent text-white p-2'
+                                className='outline-none rounded-md focus:outline-none col-span-4 w-full border-white border h-32 bg-transparent text-white p-2'
                             />
                             <ValidationError
                                 prefix="Message"
                                 field="message"
                                 errors={state.errors}
                             />
-
-                            <div className='flex w-full justify-center'>
-                                <button type="submit" disabled={state.submitting} className='mt-4 px-4 py-2 rounded-lg w-fit bg-white hover:text-white hover:bg-black hover:border-white border transition-all duration-150 hover:scale-95 text-black'>
-                                    Submit
-                                </button>
-                            </div>
+                            <button type="submit" disabled={state.submitting} className='mt-4 px-4 py-2 rounded-lg w-fit bg-white hover:text-white hover:bg-black hover:border-white border transition-all duration-150 hover:scale-95 text-black'>
+                                Submit
+                            </button>
                         </form>
                     </div>
                 </div>
