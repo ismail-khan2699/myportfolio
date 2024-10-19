@@ -8,7 +8,7 @@ const About = () => {
             <div className=' w-full flex flex-col lg:flex-row justify-between gap-10 items-center'>
                 <div className=' w-10/12 lg:w-5/12 flex flex-col gap-5'>
                     <h1 className=' gradient-text text-3xl font-bold'>Biography</h1>
-                    <p className=' gradient-text2 text-lg font-light'>
+                    <p className=' text-white font-sans text-lg font-light'>
                         Hi, I'm Ismail Ahmad Khan, a web developer with a passion for creating beautiful, functional, and user-centered digital experiences. I am always looking for new and innovative ways to bring my clients' visions to life. <br /> <br />
 
                         I believe that design is about more than just making things look pretty - it's about solving problems and creating intuitive, enjoyable experiences for users. <br /> <br />

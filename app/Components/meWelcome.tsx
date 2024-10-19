@@ -11,7 +11,7 @@ const MeWelcome = () => {
                 <p className=' text-4xl font-medium '>I am <span className=' SansitaOnef font-bold gradient-text2 '>ISMAIL AHMAD KHAN</span></p>
             </div>
             <div className='w-full md:w-1/2 px-10 flex flex-col gap-5'>
-                <p className=' gradient-text text-3xl md:text-5xl lg:text-6xl font-bold pointer-events-none'>Turning Vision Into Reality With Code</p>
+                <p className=' gradient-text text-3xl md:text-5xl lg:text-6xl font-sans font-bold pointer-events-none'>Turning Vision Into Reality With Code</p>
                 <p className=' text-gray-400 text-base lg:text-lg pointer-events-none'>As a skilled Front end developer and aspiring Fullstack Developer, I am dedicated to turning ideas into innovative web applications. Explore my latest projects, showcasing my expertise in React.js, Next.js and web development.</p>
                 <div className=' flex gap-5 items-center'>
 
@@ -21,7 +21,7 @@ const MeWelcome = () => {
                     <Link href="mailto:ismailahmadkhan4434@gmail.com" className=' hover:underline decoration-orange-500'>Contact Me</Link>
                 </div>
             </div>
-            <div className=' max-md:top-3  max-md:right-3 md:left-6 flex justify-center items-center  md:top-3 absolute h-32 w-32 '>
+            <div className=' max-md:top-3  max-md:right-3 md:left-2 flex justify-center items-center  md:top-3  max-md:hidden absolute h-32 w-32 '>
                 <Image src={'/textwhite.png'} alt='' height={100} width={100} className=' absolute h-32 w-32 animate-spin-slow duration-500' />
                 <Link href={'mailto:ismailahmadkhan4434@gmail.com'} className=' h-20 w-20 font-bold rounded-full z-50 border-white border bg-[#28282B] flex justify-center items-center text-white transition-all duration-200 hover:text-black hover:bg-white hover:scale-95' >
                     Hire Me
